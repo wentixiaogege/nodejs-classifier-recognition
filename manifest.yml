@@ -1,0 +1,14 @@
+---
+declared-services:
+  natural-language-classifier-service:
+    label: natural_language_classifier
+    plan: standard
+applications:
+- services:
+  - natural-language-classifier-service
+  - visual-recognition-service
+  name: nodejs-classifier-recognition
+  command: node app.js
+  path: .
+  memory: 512M
+  host: nodejs-classifier-recognition
